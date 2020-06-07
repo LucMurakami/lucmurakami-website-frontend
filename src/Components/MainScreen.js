@@ -2,6 +2,7 @@ import React, { useState, useMemo, forwardRef } from "react";
 import clsx from "clsx";
 import { Link } from "@reach/router";
 import {
+  Container,
   CssBaseline,
   AppBar,
   Toolbar,
@@ -104,9 +105,15 @@ const useStyles = makeStyles((theme) => ({
   },
   main: {
     width: "100%",
+    paddingLeft: 70,
+  },
+  mainShift: {
+    width: "100%",
+    paddingLeft: 250,
   },
   drawerSpacer: {
-    width: theme.spacing(7),
+    padding: 20,
+    height: "100%",
   },
 }));
 
@@ -158,44 +165,32 @@ const MainScreen = (props) => {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <Drawer
+        variant="permanent"
+        classes={{
+          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+        }}
+        open={open}
+      >
+        <div
+          classes={{
+            paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+          }}
+        >
+          <IconButton onClick={handleDrawerClose}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </div>
+        <Divider />
+        <DrawerItems />
+        <Divider />
+      </Drawer>
 
-      <Grid container direction="row" justify="center" alignItems="center">
-        <Grid item key={0} xs={12}>
-          <Drawer
-            variant="permanent"
-            classes={{
-              paper: clsx(
-                classes.drawerPaper,
-                !open && classes.drawerPaperClose
-              ),
-            }}
-            open={open}
-          >
-            <div
-              classes={{
-                paper: clsx(
-                  classes.drawerPaper,
-                  !open && classes.drawerPaperClose
-                ),
-              }}
-            >
-              <IconButton onClick={handleDrawerClose}>
-                <ChevronLeftIcon />
-              </IconButton>
-            </div>
-            <Divider />
-            <DrawerItems />
-            <Divider />
-          </Drawer>
-          <div className={classes.drawerSpacer} />
-        </Grid>
-        <Grid item key={1} xs={12}>
-          <main className={classes.main}>
+          <main className={clsx(classes.main, open && classes.mainShift)}>
             <div className={classes.appBarSpacer} />
             {props.children}
           </main>
-        </Grid>
-      </Grid>
+
     </div>
   );
 };
