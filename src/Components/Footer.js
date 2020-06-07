@@ -20,9 +20,9 @@ const Footer = () => {
   const styles = useStyles();
   return (
     <footer className="App">
-      <Container>
+
         <Container className={styles.banner}></Container>
-      </Container>
+
       footer
     </footer>
   );

@@ -1,8 +1,6 @@
-import React, { useState, useMemo, forwardRef } from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
-import { Link } from "@reach/router";
 import {
-  Container,
   CssBaseline,
   AppBar,
   Toolbar,
@@ -10,7 +8,6 @@ import {
   makeStyles,
   Typography,
   Badge,
-  Grid,
   Drawer,
   Divider,
 } from "@material-ui/core";
@@ -19,7 +16,6 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
 import DrawerItems from "./DrawerItems";
-import Banner from "../Images/banner.jpg";
 
 const drawerWidth = 250;
 
@@ -84,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9),
     },
   },
-  appBarSpacer: theme.mixins.toolbar,
+  
   content: {
     flexGrow: 1,
     height: "100vh",
@@ -109,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mainShift: {
     width: "100%",
-    paddingLeft: 250,
+    paddingLeft: drawerWidth,
   },
   drawerSpacer: {
     padding: 20,
@@ -173,9 +169,7 @@ const MainScreen = (props) => {
         open={open}
       >
         <div
-          classes={{
-            paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
-          }}
+          className={classes.toolbarIcon}
         >
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
@@ -187,7 +181,6 @@ const MainScreen = (props) => {
       </Drawer>
 
           <main className={clsx(classes.main, open && classes.mainShift)}>
-            <div className={classes.appBarSpacer} />
             {props.children}
           </main>
 

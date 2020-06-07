@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  appBarSpacer: theme.mixins.toolbar,
   paper: {
     padding: theme.spacing(2),
     margin: "auto",
@@ -27,10 +28,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const HomeView = () => {
-  const styles = useStyles();
+  const classes = useStyles();
   return (
-    <Grid className={styles.root}>
-      <Paper className={styles.paper}>
+    <Grid className={classes.root}>
+      <div className={classes.appBarSpacer} />
+      <Paper className={classes.paper}>
         <Grid
           container
           direction="row"
@@ -78,9 +80,9 @@ const HomeView = () => {
             <Typography>Look out world, here I come!</Typography>
           </Grid>
           <Grid key={1} item xs={12} md={6}>
-            <ButtonBase className={styles.image}>
+            <ButtonBase className={classes.image}>
               <img
-                className={styles.img}
+                className={classes.img}
                 alt="headshot"
                 src={Headshot}
                 id="headshot"

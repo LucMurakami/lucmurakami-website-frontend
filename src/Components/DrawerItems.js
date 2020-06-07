@@ -6,8 +6,9 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-
+import HomeIcon from '@material-ui/icons/Home';
+import CodeIcon from '@material-ui/icons/Code';
+import SportsHockeyIcon from '@material-ui/icons/SportsHockey';
 
 function ListItemLink(props) {
   const { icon, primary, to } = props;
@@ -32,18 +33,13 @@ const TemporaryDrawer = () => {
 
   return (
       <List>
-        <ListItemLink to="/" primary="Home Page" icon={<InboxIcon />} />
+        <ListItemLink to="/" primary="Home Page" icon={<HomeIcon />} />
         <ListItemLink
           to="MyProjects"
           primary="My Projects"
-          icon={<InboxIcon />}
+          icon={<CodeIcon />}
         />
-        <ListItemLink
-          to="Coding4All"
-          primary="Coding 4 All"
-          icon={<InboxIcon />}
-        />
-        <ListItemLink to="Interests" primary="Interests" icon={<InboxIcon />} />
+        <ListItemLink to="Interests" primary="Interests" icon={<SportsHockeyIcon />} />
       </List>
   );
 };
