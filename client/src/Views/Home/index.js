@@ -1,9 +1,9 @@
 import React from 'react';
-import HomeView from './HomeView'
+import HomeScreen from './HomeScreen'
 
 const Home = () => {
   return (
-    <HomeView />
+    <HomeScreen />
   )
 }
 

@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
 }));
 
-const InterestsView = () => {
+const InterestsScreen = () => {
   const classes = useStyles();
   return (
     <Container>
@@ -15,4 +15,4 @@ const InterestsView = () => {
   );
 };
 
-export default InterestsView;
+export default InterestsScreen;

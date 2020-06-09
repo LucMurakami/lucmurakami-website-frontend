@@ -1,9 +1,9 @@
 import React from 'react';
-import InterestsView from './InterestsView'
+import InterestsScreen from './InterestsScreen'
 
 const Interests = () => {
   return (
-    <InterestsView />
+    <InterestsScreen />
   )
 }
 

@@ -5,14 +5,15 @@ const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
 }));
 
-const MyProjectsView = () => {
+const BackendTemplateScreen = ({data}) => {
   const classes = useStyles();
   return (
     <Container>
       <div className={classes.appBarSpacer} />
-      <p>This is MyProjectsScreen</p>
+      {!data && <p>Loading...</p>}
+      {data && <p>{data.text}</p>}
     </Container>
   );
 };
 
-export default MyProjectsView;
+export default BackendTemplateScreen;
