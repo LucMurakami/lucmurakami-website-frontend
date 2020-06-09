@@ -4,11 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "supertest": "^4.0.2"
   },
   "scripts": {
     "start": "node index.js",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "devDependencies": {
     "jest": "^26.0.1"
