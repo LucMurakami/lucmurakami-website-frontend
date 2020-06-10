@@ -9,20 +9,19 @@ CLOUDFRONT_DIST_ID=''
 if [[ $TRAVIS_BRANCH == $STAGING_BRANCH ]]; then
   NODE_ENV="staging"
   CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_STAGING
+  S3_BUCKET="lucmurakami-website-$NODE_ENV"
   yarn build:staging
 elif [[ $TRAVIS_BRANCH == $PRODUCTION_BRANCH ]]; then
   NODE_ENV="production"
   CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_PRODUCTION
+  S3_BUCKET="lucmurakami.ca"
   yarn build:production
 else
   echo "Not deploying"
   exit
 fi
 
-S3_BUCKET="lucmurakami-website-$NODE_ENV"
 echo "Deploying to the $S3_BUCKET bucket"
-
-# pip3 install --upgrade --user awscli
 
 aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
