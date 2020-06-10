@@ -9,4 +9,4 @@ script:
 
 after_success:
   - chmod +x .travis/deploy.sh
-  -"./.travis/deploy.sh"
+  - "./.travis/deploy.sh"
