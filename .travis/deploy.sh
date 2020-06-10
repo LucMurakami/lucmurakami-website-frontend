@@ -22,12 +22,12 @@ fi
 S3_BUCKET="lucmurakami-website-$NODE_ENV"
 echo "Deploying to the $S3_BUCKET bucket"
 
-pip install awscli --upgrade --user
+pip3 install --upgrade --user awscli
 
 aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
 aws configure set default.region us-west-2
 
-aws s3 sync public/ "s3://$S3_BUCKET" --acl public-read --delete
+aws s3 sync build/ "s3://$S3_BUCKET" --acl public-read --delete
 
 aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths /*
