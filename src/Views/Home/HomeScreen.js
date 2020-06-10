@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HomeView = () => {
+const HomeScreen = () => {
   const classes = useStyles();
   return (
     <Grid className={classes.root}>
@@ -95,4 +95,4 @@ const HomeView = () => {
   );
 };
 
-export default HomeView;
+export default HomeScreen;

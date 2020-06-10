@@ -1,9 +1,9 @@
 import React from 'react';
-import MyProjectsView from './MyProjectsView'
+import MyProjectsScreen from './MyProjectsScreen'
 
 const MyProjects = () => {
   return (
-    <MyProjectsView />
+    <MyProjectsScreen />
   )
 }
 
