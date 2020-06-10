@@ -41,10 +41,10 @@ const HomeScreen = () => {
           spacing={2}
         >
           <Grid key={0} item xs={12} md={6} >
-            <Typography variant="h2">Who Am I?</Typography>
+            <Typography variant="h2">About Me</Typography>
             <Typography>
-              Hi! My name is Luc Murakami and I am a student currently studying
-              at BCIT in the CST program. Curious in nature, and relentless in
+              Hi! My name is Luc Murakami and I am a new grad of the BCIT CST
+              program. Curious in nature, and relentless in
               my work ethic, I want to learn everything there is to know about
               the technology field and cut out my own, unique path.
             </Typography>
