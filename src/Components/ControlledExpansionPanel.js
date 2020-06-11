@@ -60,15 +60,17 @@ const ControlledExpansionPanel = ({ data }) => {
               <div>
                 <Typography variant="p">{interest.description}</Typography>
                 {interest.link && (
-                  <Link
-                    component="button"
-                    variant="body2"
-                    onClick={() => {
-                      window.open(data.link);
-                    }}
-                  >
-                    {interest.linkDescription}
-                  </Link>
+                  <div>
+                    <Link
+                      component="button"
+                      variant="body2"
+                      onClick={() => {
+                        window.open(data.link);
+                      }}
+                    >
+                      {interest.linkDescription}
+                    </Link>
+                  </div>
                 )}
               </div>
             </ExpansionPanelDetails>
