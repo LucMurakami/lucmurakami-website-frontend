@@ -10,6 +10,7 @@ import {
   CardContent,
   CardActions,
   Collapse,
+  Divider,
   Avatar,
   IconButton,
   Typography,
@@ -56,12 +57,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
     paddingRight: 10,
   },
-  collapseText: {
-    margin: 0,
-  },
-  icon: {
-    margin: 0,
-  }
 }));
 
 const ComplexCard = ({
@@ -137,11 +132,13 @@ const ComplexCard = ({
         title={title}
         subheader={date}
       />
+      <Divider />
       <CardMedia
         className={classes.media}
         image={imagePath}
         title={cardTitle}
       />
+      <Divider />
       <CardContent>
         {!description && (
           <Typography variant="body2" color="textSecondary" component="p">
@@ -155,20 +152,6 @@ const ComplexCard = ({
         )}
       </CardContent>
       <CardActions disableSpacing>
-        {projectGithubLink && (
-          <IconButton
-            aria-label="github project link"
-            onClick={() => window.open(projectGithubLink)}
-          >
-            <GitHubIcon />
-          </IconButton>
-        )}
-        {!projectGithubLink && (
-          <IconButton disabled
-          >
-            <GitHubIcon style={{visibility: "hidden"}}/>
-          </IconButton>
-        )}
         <Button
           className={classes.showTechText}
           component={Link}

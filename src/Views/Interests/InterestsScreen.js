@@ -1,16 +1,24 @@
 import React from "react";
-import { Container, makeStyles } from "@material-ui/core";
+import { Container, makeStyles, Typography, Paper } from "@material-ui/core";
+
+import ControlledExpansionPanel from "../../Components/ControlledExpansionPanel";
 
 const useStyles = makeStyles((theme) => ({
+  containerStyle: {
+    padding: 20,
+  },
   appBarSpacer: theme.mixins.toolbar,
 }));
 
-const InterestsScreen = () => {
+const InterestsScreen = ({ data }) => {
   const classes = useStyles();
   return (
-    <Container>
+    <Container className={classes.containerStyle}>
       <div className={classes.appBarSpacer} />
-      <p>This is the InterestsScreen</p>
+      <Typography variant="h2">My Interests</Typography>
+      <Paper>
+        <ControlledExpansionPanel data={data} />
+      </Paper>
     </Container>
   );
 };
