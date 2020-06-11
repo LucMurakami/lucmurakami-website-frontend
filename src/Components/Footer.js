@@ -20,10 +20,8 @@ const Footer = () => {
   const styles = useStyles();
   return (
     <footer className="App">
-
-        <Container className={styles.banner}></Container>
-
-      footer
+        <div className={styles.banner} />
+        <Container>This is the footer</Container>
     </footer>
   );
 };

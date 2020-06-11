@@ -36,12 +36,12 @@ const TemporaryDrawer = () => {
       <List>
         <ListItemLink to="/" primary="Home Page" icon={<HomeIcon />} />
         <ListItemLink
-          to="MyProjects"
+          to="myprojects"
           primary="My Projects"
           icon={<CodeIcon />}
         />
-        <ListItemLink to="Interests" primary="Interests" icon={<SportsHockeyIcon />} />
-        <ListItemLink to="Backend" primary="BackendTemplate" icon={<BuildIcon />} />
+        <ListItemLink to="interests" primary="Interests" icon={<SportsHockeyIcon />} />
+        <ListItemLink to="backend" primary="BackendTemplate" icon={<BuildIcon />} />
       </List>
   );
 };
