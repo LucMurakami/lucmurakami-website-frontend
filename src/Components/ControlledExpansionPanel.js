@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {ExpansionPanel, ExpansionPanelDetails,ExpansionPanelSummary, Typography} from "@material-ui/core";
+import {
+  ExpansionPanel,
+  ExpansionPanelDetails,
+  ExpansionPanelSummary,
+  Typography,
+  Link,
+} from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    padding: 10,
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -20,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ControlledExpansionPanel = ({ data }) => {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -33,6 +40,8 @@ const ControlledExpansionPanel = ({ data }) => {
           <ExpansionPanel
             expanded={expanded === `panel${index}`}
             onChange={handleChange(`panel${index}`)}
+            key={index}
+            className={classes.expansionPanel}
           >
             <ExpansionPanelSummary
               expandIcon={<ExpandMoreIcon />}
@@ -47,9 +56,20 @@ const ControlledExpansionPanel = ({ data }) => {
               </Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography>
-                {interest.description}
-              </Typography>
+              <div>
+                <Typography variant="p">{interest.description}</Typography>
+                {interest.link && (
+                  <Link
+                    component="button"
+                    variant="body2"
+                    onClick={() => {
+                      window.open(data.link);
+                    }}
+                  >
+                    {interest.linkDescription}
+                  </Link>
+                )}
+              </div>
             </ExpansionPanelDetails>
           </ExpansionPanel>
         );

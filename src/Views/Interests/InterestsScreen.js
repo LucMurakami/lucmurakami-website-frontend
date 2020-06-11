@@ -16,9 +16,7 @@ const InterestsScreen = ({ data }) => {
     <Container className={classes.containerStyle}>
       <div className={classes.appBarSpacer} />
       <Typography variant="h2">My Interests</Typography>
-      <Paper>
-        <ControlledExpansionPanel data={data} />
-      </Paper>
+      <ControlledExpansionPanel data={data} />
     </Container>
   );
 };
