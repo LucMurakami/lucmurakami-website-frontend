@@ -6,6 +6,6 @@ import HomeScreen from "./HomeScreen";
 describe("HomeScreen", () => {
   test("Renders with text", () => {
     const { getByText } = render(<HomeScreen />);
-    expect(getByText("Who Am I?")).toBeTruthy();
+    expect(getByText("About Me")).toBeTruthy();
   });
 });

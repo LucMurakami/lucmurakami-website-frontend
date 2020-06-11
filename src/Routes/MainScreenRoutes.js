@@ -10,9 +10,9 @@ const MainScreenRoutes = () => {
   return (
     <Router>
       <Home path="/" />
-      <MyProjects path="MyProjects" />
-      <Interests path="Interests" />
-      <BackendTemplate path="Backend" />
+      <MyProjects path="myprojects" />
+      <Interests path="interests" />
+      <BackendTemplate path="backend" />
     </Router>
   );
 }

@@ -40,11 +40,11 @@ const HomeScreen = () => {
           alignItems="center"
           spacing={2}
         >
-          <Grid key={0} item xs={12} md={6} >
-            <Typography variant="h2">Who Am I?</Typography>
+          <Grid key={0} item xs={12} md={7} >
+            <Typography variant="h2">About Me</Typography>
             <Typography>
-              Hi! My name is Luc Murakami and I am a student currently studying
-              at BCIT in the CST program. Curious in nature, and relentless in
+              Hi! My name is Luc Murakami and I am a new grad of the BCIT CST
+              program. Curious in nature, and relentless in
               my work ethic, I want to learn everything there is to know about
               the technology field and cut out my own, unique path.
             </Typography>
@@ -79,7 +79,7 @@ const HomeScreen = () => {
             <br />
             <Typography>Look out world, here I come!</Typography>
           </Grid>
-          <Grid key={1} item xs={12} md={6}>
+          <Grid key={1} item xs={12} md={5}>
             <ButtonBase className={classes.image}>
               <img
                 className={classes.img}
