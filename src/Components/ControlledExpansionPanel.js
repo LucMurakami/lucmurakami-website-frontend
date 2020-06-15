@@ -58,7 +58,7 @@ const ControlledExpansionPanel = ({ data }) => {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <div>
-                <Typography variant="p">{interest.description}</Typography>
+                <Typography variant="body1">{interest.description}</Typography>
                 {interest.link && (
                   <div>
                     <Link
