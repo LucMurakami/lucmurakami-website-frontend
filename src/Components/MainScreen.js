@@ -14,6 +14,7 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import DrawerItems from "./DrawerItems";
 
@@ -152,11 +153,16 @@ const MainScreen = (props) => {
             noWrap
             className={classes.title}
           >
-            Dashboard
+            Luc's Website
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
+          <IconButton
+            aria-label="linked in link"
+            onClick={() => window.open("https://www.linkedin.com/in/lucmurakami/")}
+            color="inherit"
+            size="small"
+          >
+            <Badge variant="dot" color="secondary">
+              <LinkedInIcon />
             </Badge>
           </IconButton>
         </Toolbar>
