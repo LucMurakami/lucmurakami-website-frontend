@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, makeStyles, Typography, Paper } from "@material-ui/core";
+import { Container, makeStyles, Typography } from "@material-ui/core";
 
 import ControlledExpansionPanel from "../../Components/ControlledExpansionPanel";
 
