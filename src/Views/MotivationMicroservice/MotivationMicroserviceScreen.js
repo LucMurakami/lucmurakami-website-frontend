@@ -13,9 +13,15 @@ const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
   root: {
     paddingBottom: 20,
-    minWidth: 500,
+    minWidth: 300,
     margin: 20,
   },
+  imgDiv: {
+    textAlign: "center"
+  },
+  img: {
+    width: "80%",
+  }
 }));
 
 const MotivationMicroserviceScreen = ({ data }) => {
@@ -33,7 +39,7 @@ const MotivationMicroserviceScreen = ({ data }) => {
               {!data && "Loading..."}
             </Typography>
           </Grid>
-          <Grid item>{data && <img src={data.image} alt="Motivation" width="480"/>}</Grid>
+          <Grid item><div className={classes.imgDiv}>{data && <img src={data.image} alt="Motivation" className={classes.img} />}</div></Grid>
           <Grid item>
             <Typography variant="body2" color="textSecondary" component="p">
               Number of Upvotes: {data && data.upvotes}
