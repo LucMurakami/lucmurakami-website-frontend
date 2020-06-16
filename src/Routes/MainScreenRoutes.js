@@ -4,7 +4,7 @@ import { Router } from "@reach/router";
 import Home from "../Views/Home";
 import MyProjects from "../Views/MyProjects";
 import Interests from "../Views/Interests";
-import BackendTemplate from "../Views/BackendTemplate";
+import MotivationMicroservice from "../Views/MotivationMicroservice";
 
 const MainScreenRoutes = () => {
   return (
@@ -12,7 +12,7 @@ const MainScreenRoutes = () => {
       <Home path="/" />
       <MyProjects path="myprojects" />
       <Interests path="interests" />
-      <BackendTemplate path="backend" />
+      <MotivationMicroservice path="motivation" />
     </Router>
   );
 }

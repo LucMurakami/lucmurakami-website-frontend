@@ -9,7 +9,7 @@ import {
 import HomeIcon from '@material-ui/icons/Home';
 import CodeIcon from '@material-ui/icons/Code';
 import SportsHockeyIcon from '@material-ui/icons/SportsHockey';
-import BuildIcon from '@material-ui/icons/Build';
+import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 
 function ListItemLink(props) {
   const { icon, primary, to } = props;
@@ -41,7 +41,7 @@ const TemporaryDrawer = () => {
           icon={<CodeIcon />}
         />
         <ListItemLink to="interests" primary="Interests" icon={<SportsHockeyIcon />} />
-        <ListItemLink to="backend" primary="BackendTemplate" icon={<BuildIcon />} />
+        <ListItemLink to="motivation" primary="Motivation Microservice" icon={<SentimentVerySatisfiedIcon />} />
       </List>
   );
 };
