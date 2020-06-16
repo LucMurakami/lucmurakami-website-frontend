@@ -5,7 +5,7 @@ const BackendTemplate = () => {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    fetch('http://lucmurakami-website-backend-lb-1188070059.us-west-2.elb.amazonaws.com/')
+    fetch('https://api.lucmurakami.ca/')
       .then(res => res.json())
       .then(res => setData(res))
   }, []);
