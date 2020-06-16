@@ -65,7 +65,7 @@ const ControlledExpansionPanel = ({ data }) => {
                       component="button"
                       variant="body2"
                       onClick={() => {
-                        window.open(data.link);
+                        window.open(interest.link);
                       }}
                     >
                       {interest.linkDescription}
