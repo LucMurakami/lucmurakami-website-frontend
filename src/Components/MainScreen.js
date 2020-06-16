@@ -13,8 +13,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 import DrawerItems from "./DrawerItems";
 
@@ -81,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9),
     },
   },
-  
+
   content: {
     flexGrow: 1,
     height: "100vh",
@@ -157,7 +156,9 @@ const MainScreen = (props) => {
           </Typography>
           <IconButton
             aria-label="linked in link"
-            onClick={() => window.open("https://www.linkedin.com/in/lucmurakami/")}
+            onClick={() =>
+              window.open("https://www.linkedin.com/in/lucmurakami/")
+            }
             color="inherit"
             size="small"
           >
@@ -174,9 +175,7 @@ const MainScreen = (props) => {
         }}
         open={open}
       >
-        <div
-          className={classes.toolbarIcon}
-        >
+        <div className={classes.toolbarIcon}>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
@@ -186,10 +185,9 @@ const MainScreen = (props) => {
         <Divider />
       </Drawer>
 
-          <main className={clsx(classes.main, open && classes.mainShift)}>
-            {props.children}
-          </main>
-
+      <main className={clsx(classes.main, open && classes.mainShift)}>
+        {props.children}
+      </main>
     </div>
   );
 };
